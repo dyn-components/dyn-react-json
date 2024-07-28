@@ -1,0 +1,77 @@
+.dyn-component--react.dyn-json {
+  transform: translate(0, 0);
+  text-align: left;
+
+  .copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: map-get($map: $theme, $key: background-color);
+    color: map-get($map: $theme, $key: text-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .copy-button:hover {
+    background-color: map-get($map: $theme, $key: shadow-color);
+  }
+
+  .json-container {
+    font-family: monospace;
+    white-space: pre;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid map-get($map: $theme, $key: border-color);
+    border-radius: 4px;
+    background-color: map-get($map: $theme, $key: background-color);
+    line-height: 1.5;
+    position: relative;
+
+    & > .json-object {
+      margin-left: 0;
+    }
+  }
+  .colon {
+    margin-right: 5px;
+  }
+
+  .bracket {
+    margin-left: -10px;
+  }
+
+  .json-key {
+    font-weight: bold;
+    color: map-get($map: $theme, $key: error-color);
+  }
+  .json-value {
+    color: map-get($map: $theme, $key: primary-color);
+
+    &.string {
+      color: map-get($map: $theme, $key: primary-color);
+    }
+    &.number {
+      color: map-get($map: $theme, $key: success-color);
+    }
+    &.boolean {
+      color: map-get($map: $theme, $key: success-color);
+    }
+    &.null {
+      color: map-get($map: $theme, $key: warning-color);
+    }
+  }
+  .json-toggle {
+    cursor: pointer;
+    color: map-get($map: $theme, $key: text-color);
+    user-select: none;
+  }
+  .json-object {
+    margin-left: 10px;
+    border-left: 1px solid
+      rgba($color: map-get($map: $theme, $key: border-color), $alpha: 0.5);
+    padding-left: 10px;
+  }
+  .hidden {
+    display: none;
+  }
+}

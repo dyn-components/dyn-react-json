@@ -1,0 +1,50 @@
+{
+  "name": "@react/json",
+  "private": true,
+  "version": "0.0.0-alpha.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "build:example": "tsc -b && vite build",
+    "build:lib": "tsc -b && vite build --config ./vite-lib.config.ts",
+    "build": "npm run build:lib && npm run build:example"
+  },
+  "dependencies": {
+    "dyn-components": "0.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "sass": "^1.77.8",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.18.2",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "3.7.3",
+    "vite-plugin-lib-inject-css": "^2.1.1"
+  },
+  "author": "wuyuedefeng",
+  "description": "",
+  "homepage": "",
+  "types": "./dist/json.d.ts",
+  "main": "./dist/json.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/json.es.js",
+      "require": "./dist/json.umd.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ]
+}
